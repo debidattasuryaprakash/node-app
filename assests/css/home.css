@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 150vh;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    min-height: 90vh;
+    width: 90%;
+    align-items: center;
+    border-radius: 2rem;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right bottom , rgba(160,255,253, 0.7), rgba(255,195,160,0.3));
+    z-index: 2; 
+    backdrop-filter: blur(2rem);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 3px 2px 2px rgb(192, 224, 240);
+}
+.square1, .square2{
+    background: white;
+    min-height: 13rem;
+    width: 13rem;
+    background: linear-gradient(to right bottom , rgba(160,255,253, 0.7), rgba(255,195,160,0.3));
+    border-radius: 2rem;
+    position: absolute;
+    top: 5%;
+}
+.square1{
+    position: absolute;
+    top: 10%;
+    left: 83%;
+    background: rgb(243, 178, 178);
+    border-radius: 50%;
+    animation: animate ease-in-out 3s infinite;
+    box-shadow: 3px 2px 2px rgb(255, 137, 137);
+}
+.square2{
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    background: rgb(243, 178, 178);
+    border-radius: 50%;
+    animation: animate ease-in-out 3s infinite;
+    box-shadow: 3px 2px 2px rgb(255, 137, 137);
+}
+@keyframes animate{
+    0%, 100%
+    {
+        transform: translateY(-10px);
+    }
+    50%
+    {
+        transform: translateY(10px)
+    }
+}
+
+.head-title{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: 45px;
+    font-family: Ubuntu;
+    color:rgb(19, 4, 54);
+}
+
+.contact{
+    margin: auto;
+    width: 36vw;
+}
+
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 50px;
+    background: #f07575;
+    box-shadow: inset 5px 5px 10px #602f2f,
+            inset -5px -5px 10px #ffbbbb;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.delete-btn{
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.fa-user-minus:hover{
+    color: black
+}
+
+.list-item:hover{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.125);
+    cursor: pointer;
+    border-radius: 12px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #5a5a5a,
+                 -5px -5px 10px #ffffff;
+}
+
+.name,.mobile{
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+
+.form-group{
+    margin: auto;
+    width: 36vw;
+}
+
+.name-input, .mob-input{
+    height: 36px;
+    width: 14vw;
+    border: none;
+    border-radius: 10px;
+    border-radius: 50px;
+background: #f07575;
+box-shadow: inset 5px 5px 10px #602f2f,
+            inset -5px -5px 10px #ffbbbb;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+
+}
+.submit{
+    height: 36px;
+    width: 5vw;
+    border: none;
+    border-radius: 38px;
+background: linear-gradient(145deg, #7aa9c7, #92c9ec);
+
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+::placeholder{
+    
+    color: black;
+}

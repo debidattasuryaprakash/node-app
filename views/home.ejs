@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://kit.fontawesome.com/e9cb9b0869.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="head-title">My Todo List</h1>
+        <div class="contact">
+            <ul>
+                <% for(let i of todo_list){ %>
+                    
+                    <li class="list-item">
+                        <div class="delete-btn"><a href="/delete-todo/?id=<%= i._id %>"><i class="fas fa-trash-alt"></i></a></div>
+                        <div class="name"><p><%= i.type %></p></div>
+                        <div class="mobile"><p><%= i.todo %></p></div>
+                    </li>
+    
+                    <% } %>
+            </ul>
+        </div>
+        <div>
+            <form autocomplete="off" class="form-group" action="/create-todo" method="POST">
+                <input class="name-input" type="text" name="type" placeholder="Details" required autocomplete="off" >
+                <input class="mob-input" type="tel" name="todo" placeholder="Task" required autocomplete="off" >
+                <button class="submit" type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <div class="square1"></div>
+    <div class="square2"></div>
+   
+    <script type="text/javascript" src="/js/home.js">
+
+    </script>
+</body>
+</html>
