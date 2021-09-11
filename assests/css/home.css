@@ -86,7 +86,7 @@ body{
     justify-content: space-between;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border-radius: 50px;
+    border-radius: 10px;
     background: #f07575;
     box-shadow: inset 5px 5px 10px #602f2f,
             inset -5px -5px 10px #ffbbbb;
